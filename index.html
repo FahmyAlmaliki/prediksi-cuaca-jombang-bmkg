@@ -3,61 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Prakiraan Cuaca Jombang - BMKG</title>
+    <title>Sistem Prakiraan Cuaca Kabupaten Jombang - BMKG</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="hero-content">
-            <div class="hero-badge">🌦️ Real-Time Weather Data</div>
-            <h1 class="hero-title">Dashboard Cuaca Jombang</h1>
-            <h2 class="hero-subtitle">Universitas Brawijaya</h2>
-            <p class="hero-description">Dari Kampus untuk Negeri: Menyajikan Prakiraan Cuaca Berbasis AI & Data BMKG.</p>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <div class="stat-number">43</div>
-                    <div class="stat-label">Kelurahan/Desa</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">17</div>
-                    <div class="stat-label">Kecamatan</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Hari Prakiraan</div>
-                </div>
-            </div>
-            <div class="hero-buttons">
-                <button class="hero-button primary" onclick="document.getElementById('dashboard').scrollIntoView({behavior: 'smooth'})">Lihat Dashboard 🚀</button>
-                <a href="https://devel-ai.ub.ac.id/jombang" class="hero-button secondary" target="_blank">Monitoring Real-Time 📊</a>
-            </div>
-        </div>
-        <div class="hero-decoration">
-            <div class="weather-icon animated">☀️</div>
-            <div class="weather-icon animated delay-1">🌤️</div>
-            <div class="weather-icon animated delay-2">⛅</div>
-            <div class="weather-icon animated delay-3">🌧️</div>
+    <!-- Hero Header Section -->
+    <div class="main-header">
+        <div class="header-bg-pattern"></div>
+        <div class="header-container">
+            <h1 class="main-title">Sistem Prakiraan Cuaca Kabupaten Jombang</h1>
+            <h2 class="university">Universitas Brawijaya</h2>
+            <p class="tagline">Dari Kampus untuk Negeri: Menyajikan Prakiraan Cuaca Berbasis Data BMKG</p>
         </div>
     </div>
 
     <div class="container" id="dashboard">
-        <header>
-            <div class="header-content">
-                <div>
-                    <h1>📊 Dashboard Prakiraan Cuaca</h1>
-                    <p class="subtitle">Data real-time dari BMKG untuk wilayah Kabupaten Jombang</p>
-                </div>
-                <a href="https://devel-ai.ub.ac.id/jombang" class="back-button" target="_blank">
-                    <span class="icon">🔄</span>
-                    <span class="text">Monitoring Real-Time</span>
-                </a>
-            </div>
-        </header>
-
-        <div class="location-selector">
-            <label for="areaCode">Pilih Wilayah Jombang:</label>
-            <select id="areaCode">
+        <div class="control-panel">
+            <div class="location-selector-panel">
+                <label for="areaCode">🌍 Pilih Wilayah:</label>
+                <select id="areaCode">
                 <option value="">-- Pilih Kelurahan/Desa di Kabupaten Jombang --</option>
                 <optgroup label="Kec. Jombang">
                     <option value="35.17.09.1002">Jombatan</option>
@@ -141,7 +105,11 @@
                     <option value="35.17.21.2001">Ketapangkuning</option>
                 </optgroup>
             </select>
-            <div id="selectedInfo" style="margin-top: 10px; font-size: 0.9em; color: #666;"></div>
+            <a href="https://devel-ai.ub.ac.id/jombang" class="monitoring-btn" target="_blank">
+                📊 Monitoring Real-Time
+            </a>
+        </div>
+            <div id="selectedInfo" class="selected-info"></div>
         </div>
 
         <div id="loading" class="loading" style="display: none;">
@@ -168,8 +136,12 @@
         </div>
 
         <footer>
-            <p>Sumber Data: <strong>BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</strong></p>
-            <p class="update-time">Terakhir diperbarui: <span id="updateTime"></span></p>
+            <div class="footer-content">
+                <p>© 2025 Sistem Prakiraan Cuaca Kabupaten Jombang - Universitas Brawijaya. All rights reserved.</p>
+                <p class="footer-tagline">Dari Kampus untuk Negeri: Dukungan Data untuk Masyarakat</p>
+                <p class="data-source">Sumber Data: <strong>BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)</strong></p>
+                <p class="update-time">Terakhir diperbarui: <span id="updateTime"></span></p>
+            </div>
         </footer>
     </div>
 
